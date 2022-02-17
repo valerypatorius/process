@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images scaling</title>
+    <style>
+        body, figure, p {
+            margin: 0;
+        }
+
+        body {
+            background-color: #f2f2f2;
+            font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 17px;
+            line-height: 26px;
+        }
+
+        article {
+            background-color: #fff;
+            max-width: 1020px;
+            display: grid;
+            gap: 32px;
+            padding: 32px 0;
+            margin: auto;
+        }
+
+        p {
+            max-width: 640px;
+            justify-self: center;
+            padding: 0 16px;
+        }
+
+        figure {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+
+        .image {
+            --offset: 8px;
+
+            max-width: calc(var(--max-width) + var(--w-h-ratio) * var(--offset) * 2);
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .image__spacer,
+        .image__self {
+            width: 100%;
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .image__spacer::before,
+        .image__self::before {
+            content: '';
+            display: block;
+            padding-top: calc(var(--h-w-ratio) * 100%);
+        }
+
+        .image__self {
+            max-width: var(--max-width);
+            background-color: #222;
+            position: relative;
+        }
+
+        img, video {
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <p>
+            Надстройка преобразует интеллект. Сомнение, следовательно, методологически представляет собой даосизм. Гравитационный парадокс творит позитивизм.
+        </p>
+
+        <figure>
+            <div class="image" style="--max-width: 640px; --h-w-ratio: 0.6666; --w-h-ratio: 1.5;">
+                <div class="image__spacer"></div>
+                <div class="image__self">
+                    <img src="https://leonardo.osnova.io/b6d3dc72-fef4-5bdb-9141-9a189059b86b/">
+                </div>
+            </div>
+        </figure>
+
+        <p>
+            Гегельянство трогательно наивно. Интеллект понимает под собой принцип восприятия, при этом буквы А, В, I, О символизируют соответственно общеутвердительное, общеотрицательное,
+            частноутвердительное и частноотрицательное суждения. Веданта транспонирует непредвиденный структурализм. Знак понимает под собой субъективный гравитационный парадокс.
+            Знак, как следует из вышесказанного, прост.
+        </p>
+
+        <figure>
+            <div class="image" style="--max-width: 420px; --h-w-ratio: 1; --w-h-ratio: 1;">
+                <div class="image__spacer"></div>
+                <div class="image__self">
+                    <img src="https://leonardo.osnova.io/78d18289-3878-521a-acc3-97f1a349717c/-/scale_crop/800x800/">
+                </div>
+            </div>
+        </figure>
+
+        <p>
+            Гегельянство трогательно наивно. Интеллект понимает под собой принцип восприятия, при этом буквы А, В, I, О символизируют соответственно общеутвердительное, общеотрицательное,
+            частноутвердительное и частноотрицательное суждения.
+        </p>
+
+        <figure>
+            <div class="image" style="--max-width: 236px; --h-w-ratio: 1.7777; --w-h-ratio: 0.5625;">
+                <div class="image__spacer"></div>
+                <div class="image__self">
+                    <video src="https://leonardo.osnova.io/7440ea14-5741-5048-86fd-d699144b0b5c/-/format/mp4/" muted autoplay loop playsinline></video>
+                </div>
+            </div>
+        </figure>
+
+        <p>
+            Освобождение представляет собой напряженный здравый смысл. Отсюда естественно следует, что позитивизм подчеркивает закон исключённого третьего, открывая новые горизонты.
+            Моцзы, Сюнъцзы и другие считали, что апперцепция творит здравый смысл, tertium nоn datur.
+        </p>
+    </article>
+</body>
+</html>
